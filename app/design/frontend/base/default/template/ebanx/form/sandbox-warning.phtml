@@ -3,7 +3,7 @@
 if (!Mage::helper('ebanx')->isSandboxMode()) {
   return;
 }
-
+$warningTexts = Mage::helper('ebanx')->getSandboxWarningText();
 $skinsPath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
 
 ?>
