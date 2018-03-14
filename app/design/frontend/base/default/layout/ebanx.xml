@@ -157,6 +157,7 @@
                 <block type="ebanx/checkout_success_payment_otroscupones" name="ebanx.success.payment.rapipago"
                        as="ebanx_otroscupones" template="ebanx/checkout/success/otroscupones.phtml"/>
             </block>
+            <block type="ebanx/checkout_success_payment_apps" after="ebanx.success.payment" as="ebanx_apps" template="ebanx/checkout/success/apps.phtml"/>
         </reference>
     </ebanx_checkout_success_handle>
     <checkout_onepage_success>
