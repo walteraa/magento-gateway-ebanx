@@ -67,7 +67,7 @@ abstract class Ebanx_Gateway_Block_Form_Creditcard extends Mage_Payment_Block_Fo
 	protected function _construct()
 	{
 		parent::_construct();
-		$this->setTemplate('ebanx/form/card/main.phtml');
+		$this->setTemplate($this->getTemplatePath());
 	}
 
 	/**

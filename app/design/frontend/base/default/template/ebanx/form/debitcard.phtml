@@ -20,7 +20,7 @@ echo $showInlineIcon ? '<div class="ebanx-method-icon-box">' . $icon . $sandboxT
       </div>
     <?php endif; ?>
   </li>
-  <?php include 'fields.phtml' ?>
+  <?php echo $this->getLayout()->createBlock('ebanx/form_fields')->setTemplate('ebanx/form/fields.phtml')->getHtmlForMethodCode($this->getMethodCode()); ?>
   <li>
     <label for="<?php echo $_code ?>_dc_name" class="required"><em>*</em>Titular de la tarjeta</label>
     <div class="input-box">

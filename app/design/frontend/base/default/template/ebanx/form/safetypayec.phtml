@@ -19,7 +19,7 @@ echo $showInlineIcon ? '<div class="ebanx-method-icon-box">' . $icon . $sandboxT
       </div>
     <?php endif; ?>
   </li>
-  <?php include 'fields.phtml' ?><li>
+  <?php echo $this->getLayout()->createBlock('ebanx/form_fields')->setTemplate('ebanx/form/fields.phtml')->getHtmlForMethodCode($this->getMethodCode()); ?><li>
   <li>
     <label for="ebanx_safetypay_type_cash">
       <input type="radio" id="ebanx_safetypay_type_cash" name="ebanx_safetypay_type" value="Cash" checked>

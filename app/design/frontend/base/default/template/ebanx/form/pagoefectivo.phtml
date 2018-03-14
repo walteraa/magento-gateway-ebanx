@@ -19,7 +19,7 @@ echo $showInlineIcon ? '<div class="ebanx-method-icon-box">' . $icon . $sandboxT
       </div>
     <?php endif; ?>
   </li>
-  <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('ebanx/form/fields.phtml')->toHtml(); ?><li>
+  <?php echo $this->getLayout()->createBlock('ebanx/form_fields')->setTemplate('ebanx/form/fields.phtml')->getHtmlForMethodCode($this->getMethodCode()); ?><li>
   <li>
     <div class="total-to-pay">
       <p>Total a pagar en Sol peruano: <strong><?php echo $this->getLocalAmount('PEN') ?></strong></p>

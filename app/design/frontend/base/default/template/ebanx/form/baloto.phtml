@@ -19,7 +19,7 @@ echo $showInlineIcon ? '<div class="ebanx-method-icon-box">' . $icon . $sandboxT
       </div>
     <?php endif; ?>
   </li>
-  <?php include 'fields.phtml' ?><li>
+  <?php echo $this->getLayout()->createBlock('ebanx/form_fields')->setTemplate('ebanx/form/fields.phtml')->getHtmlForMethodCode($this->getMethodCode()); ?><li>
   <li>
     <div class="total-to-pay">
       <p>Total a pagar en Peso colombiano: <strong><?php echo $this->getLocalAmount('COP') ?></strong></p>
